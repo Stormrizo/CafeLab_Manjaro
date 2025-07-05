@@ -1,4 +1,4 @@
-# Bitácora del Espectrómetro VeMN
+# Bitácora de preparación de muestras de café de Veracruz molienda normal (VeMN) para posterior análisis en espectrómetro.
 
 Esta carpeta contiene el documento fuente (`.tex`) y los archivos auxiliares generados al compilar el reporte sobre el uso del espectrómetro para analizar muestras de café de Veracruz (Ve).
 
