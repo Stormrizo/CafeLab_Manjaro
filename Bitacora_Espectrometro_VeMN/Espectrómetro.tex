@@ -1,0 +1,385 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{angles, quotes}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepgfplotslibrary{statistics}
+\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{tasks} %Paquete necesario para la producción de items horizontales para algunos ejercicios de tarea empleando el comando /begin{multicols}}{#}.../end{multicols} para ayudarnos a reducir las páginas
+\usepackage{pdflscape} %comando que permite cambiar a orientación horizontal las hojas%
+\usepackage{soulutf8} %Paquete para permitir la compilación de acentos usando el comando {\hl{}}
+\usepackage{soul} %Paquete para poder subrayar párrafos
+\sethlcolor{yellow(munsell)} %comando para definir el color para el subrayado usando el comando \hl
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{siunitx} % para unidades como g, mL, etc.
+\usepackage[spanish]{babel}
+\usepackage{icomma}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=black, citecolor=green]{hyperref}
+\usepackage{pdfpages}
+\usepackage{blindtext} %Paquete que genera texto ficticio (dummy text) con el comando: \blindtext
+\usepackage{cancel} %in the preamble gives you four different modes of striking through: \cancel{text to cancel} draws a diagonal line (slash) through its argument, \bcancel{text to cancel} uses the negative slope (a backslash), \xcancel{text to cancel} draws an X (actually \cancel plus \bcancel), \cancelto{〈value〉}{〈expression〉} draws a diagonal arrow through the 〈expression〉pointing to the 〈value〉 (math-mode only)
+\usepackage{csquotes}
+\usepackage{afterpage}
+\usepackage{parskip} 
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{multicol}%Paquete que permite la creación aislada de columnas de texto. De esta forma se reduce la cantidad de páginas en nuestro documento
+\usepackage{lipsum} %Paquete que genera texto de relleno al igual que \usepackage{blindtext}, se usa con el comando \lipsum[#-#] los #(hashtags) delimitan el número de páginas que deseamos ocupar del paquete lipsum para usarlos como relleno. 
+\newenvironment{Figura}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+\usepackage{caption}
+\usepackage[
+backend=biber,
+sorting=none,
+url=true
+]{biblatex} %bibliografía
+\addbibresource{biblio.bib}
+% Establecer el espacio entre las entradas de la bibliografía
+\setlength{\bibitemsep}{1\baselineskip} % Puedes ajustar el valor según tus preferencias
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{pifont} %Permite la compilación del comando \xmark: es el símbolo de la tachita
+\usepackage{mathtools} %permite la compilación de símbolos para matrices
+\usepackage{empheq} %Paquete que se relaciona con \usepackage[most]{tcolorbox} para la creación de cuadros/cajas de colores para delimitar los resultados matemáticos o líneas de texto usando la línea de comando: \begin{empheq}[box={\mymath[colback=orange(webcolor)!70,drop lifted shadow]}]{equation*} \end{empheq}
+\usepackage[most]{tcolorbox} %Paquete que se relaciona con \usepackage{empheq} para la creación de cuadros/cajas de colores para delimitar los resultados matemáticos o líneas de texto
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\usetikzlibrary{positioning,decorations.pathreplacing} %Paquete que permite la compilación de llaves para cuadros sinópticos (brace diagram) 
+\usepackage{schemata} %The schemata package is designed just for these brace diagrams
+
+\newcommand\AB[2]{\schema{\schemabox{#1}}{\schemabox{#2}}} %comando o paquete necesario para crear cuadros sinópticos
+
+\newtcbox{\mymath}[1][]{%
+nobeforeafter, math upper, tcbox raise base,
+enhanced, colframe=blue!30!black,
+colback=blue!30, boxrule=1pt,
+#1} %Comando importante para encasillar los resultados matemáticos en cajas de diferentes colores, se relaciona con los paquetes \usepackage{empheq} y \usepackage[most]{tcolorbox} 
+
+\newenvironment{sysmatrix}[1]
+{\left(\begin{array}{@{}#1@{}}}
+{\end{array}\right)}
+\newcommand{\ro}[1]{%
+\xrightarrow{\mathmakebox[\rowidth]{#1}}%
+}
+\newlength{\rowidth}% row operation width
+\AtBeginDocument{\setlength{\rowidth}{3em}}  %Comando importante para laproducción de lineas de operaciones entre matrices, método de Gauss o Gauss Jordan se relaciona con \newenvironment{sysmatrix}
+
+%formato para cambiar el horario a español
+\usepackage[spanish]{datetime2}
+\DTMsetdatestyle{spanish}
+
+\renewcommand{\today}{\DTMdisplaydate{\the\year}{\the\month}{\the\day }{-1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{datetime}
+\newcommand{\mycurrenttime}{\xxivtime}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%Caja de color para el título%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{myframecolor}{RGB}{85, 100, 19} % Saratoga
+\definecolor{myboxcolor}{RGB}{177, 196, 56} % Earls Green
+
+\newtcolorbox{mybox}{
+enhanced,
+colback=myboxcolor!12, % Color de fondo del cuadro
+colframe=myframecolor, % Color del marco del cuadro
+arc=0pt,
+boxrule=1pt,
+borderline west={2mm}{-10mm}{myframecolor}, % Borde en el lado izquierdo
+sharp corners=southwest,
+width=\linewidth,
+before=\par\vspace{\bigskipamount}, % Espacio antes del cuadro
+after=\par\vspace{\bigskipamount} % Espacio después del cuadro
+}
+
+
+\newcommand{\euler}{e} %Comando para producir letra e de euler
+\newenvironment{remark}{\par\vfill\footnotesize % Vertical white space above the remark and smaller font size
+
+\begin{list}{}{
+		\leftmargin=80pt % Indentation on the left
+		\rightmargin=60pt}\item\ignorespaces % Indentation on the right
+	\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+			\node[draw=Horizon!60,line width=2.5pt,circle,fill=Horizon!25,font=\sffamily\bfseries,inner sep=4pt,outer sep=0pt] at (-19pt,5pt){\textcolor{Horizon}{Nota}};\end{tikzpicture}} % Blue Nota in a circle
+	\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+	\usepackage{graphicx}
+	
+	\usepackage{titling}
+	
+	\input{colores}
+	
+	%%Producir signos de cita textual``Asignatura''
+	
+	\newcommand{\xmark}{\ding{55}} %%%comando que genera la tachita
+	
+	\newenvironment{MyColorPar}[1]{%
+\leavevmode\color{#1}\ignorespaces%
+}{%
+}%
+
+%%%%%%%%%%%%%%%%%%% Título de la tarea, Nombre de alumno
+
+\title{Espectrómetro. Uso}
+\author{\emph{Espectrómetro} $\boldsymbol{\mid}$ Instrucciones}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%% Datos de la Materia
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\includegraphics[width=2cm]{LogoFCFMBUAP (1).png}}
+\fancyfoot[L]{{\bfseries{\thedate{}}} a las {\bfseries{\mycurrenttime{}}} horas{} (GMT-6, H. Puebla de Zaragoza, Pue)}
+\fancyhead[L]{Laboratorio de caract. de materiales ({\bfseries{FCFM}}) (BUAP) }
+\fancyhead[R]{\theauthor}
+}
+\makeatletter
+\def\@maketitle{%
+\newpage
+\null
+\vskip 1em%
+\begin{center}%
+	\let \footnote \thanks
+	{\LARGE \@title \par}%
+	\vskip 1em%
+	%{\large \@date}%
+\end{center}%
+\par
+\vskip 1em}
+\makeatother
+
+\usepackage{lipsum}  
+\usepackage{cmbright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
+\maketitle
+
+
+
+\tableofcontents \vspace{0.5cm}
+
+\section{Pasos} \vspace{0.5cm}
+
+\begin{enumerate}
+	\item Prender el espectrómetro \\
+	
+	\begin{itemize}
+		\item[a)] Monitor (pantalla y caja)\\
+		\item[b)] Espectro
+	\end{itemize} \vspace{0.2cm}
+	
+	\item Establecer \underline{parámetros}\footnote{Parámetros $\to$ \underline{Absorbancia} (\textcolor{Cinnabar}{\textbf{Data mode}}: \emph{Absorbance}), \( \text{\textcolor{Apple Green}{\textbf{wave length}}} = \left\{ \begin{array}{l}
+			start \; \lambda: 200 nm\\
+			stop \; \lambda: 410 nm
+		\end{array}  \right. \), \textcolor{Cerulean}{\textbf{Data interval}}: Quant, \textcolor{orange(colorwheel)}{\textbf{Lamp Change}}: 340, \textcolor{Sun}{\textbf{Smoothing}} = Medium} de absorción\\
+	
+	\textbf{Para absorbancia}\\
+	
+	\item Línea base (con agua)\\
+	\item 1 gota de café y dar Run\\
+	\item Guardar\\
+	
+	\textbf{Para transmitancia}\\
+	
+	\item Establecer \underline{parámetros}\footnote{Parámetros $\to$ \underline{Transmitancia} (\textcolor{Cinnabar}{\textbf{Data mode}}: \emph{\%T}), \( \text{\textcolor{Apple Green}{\textbf{wave length}}} = \left\{ \begin{array}{l}
+			start \; \lambda: 390 nm\\
+			stop \; \lambda: 750 nm
+		\end{array}  \right. \), \textcolor{Cerulean}{\textbf{Data interval}}: Normal, \textcolor{orange(colorwheel)}{\textbf{Lamp Change}}: 340, \textcolor{Sun}{\textbf{Smoothing}} = Low} de transmitancia\\
+	\item Línea base (con la gota de café)\\
+	\item 5 gotas de café\\
+	\item Run
+	\item Guardar $\longrightarrow$ \( \left\{ \begin{array}{l}
+		1. \text{Expert as ASCII}\\
+		2. \text{Data point of SPECTRA}
+	\end{array} \right. \)
+\end{enumerate}  \vspace{0.5cm}
+
+\section{Para análisis de café de veracruz} \vspace{0.5cm}
+
+
+Tenemos $\ldots$ \vspace{0.5cm}
+
+\section{\textcolor{Cinnabar}{\textbf{Absorbancia}} \textcolor{Metallic Bronze}{\textbf{café}} - Veracruz ($Ve^3$) }
+
+El subíndice \( Ve^3 \) indica el origen del \textcolor{Metallic Bronze}{\textbf{café}}, correspondiente a la siguiente nomenclatura:\footnote{%
+	\(
+	\text{Nomenclatura} =
+	\left\{
+	\begin{array}{lll}
+		\text{Veracruz} & \to & Ve \\
+		\text{Chiapas} & \to & Ch \\
+		\text{Oaxaca} & \to &  Ox \\
+		\text{\emph{Mixteca Alta Oaxaqueña}} &  \to & Mi
+	\end{array}
+	\right.
+	\)
+}
+
+
+
+Proceso inicial: \vspace{0.5cm}
+
+\begin{enumerate}
+	\item \emph{Agregar como nuestra línea base, \textcolor{Tarawera}{\bfseries{agua}} para la medición}\\
+	\item \textcolor{Cinnabar}{\textbf{Absorbancia}} de \textcolor{Metallic Bronze}{\textbf{café}}  $\boldsymbol{V_{e}}$ \emph{Agregar una gota de \textcolor{Metallic Bronze}{\textbf{café}} al \textcolor{Tarawera}{\bfseries{agua}} para la medición}.  
+\end{enumerate} 
+
+
+ 
+
+\section{\textcolor{Apple Green}{\textbf{Transmitancia}} \textcolor{Metallic Bronze}{\textbf{café}} - Veracruz ($V_{e}$)} \vspace{0.5cm}
+
+
+
+\begin{enumerate}
+	\item \emph{Agregar  \textcolor{Tarawera}{\bfseries{agua}} $+$ una gota de \textcolor{Metallic Bronze}{\textbf{café}} como nuestra línea base, \textcolor{Tarawera}{\bfseries{agua}} para la medición}\\
+	\item \textcolor{Apple Green}{\textbf{Transmitancia}} de \textcolor{Metallic Bronze}{\textbf{café}}  $\boldsymbol{V_{e}}$ \emph{Agregar cinco gotas de \textcolor{Metallic Bronze}{\textbf{café}} al \textcolor{Tarawera}{\bfseries{agua}} para la medición}.  
+\end{enumerate}  \vspace{0.5cm}
+
+
+
+
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Pruebas con diferentes concentraciones de café}
+	\label{tabla:pruebas_cafe}
+	\begin{tabular}{@{}lccc@{}}
+		\toprule
+		\textbf{\% de 15 g} & \textbf{20\%} & \textbf{50\%} & \textbf{5\%} \\
+		\midrule
+		\textbf{Café} & 18 g & 22.5 g & 7.5 g \\
+		\textbf{Nombre} & ChMG\_20 & ChMG\_50 & ChMG\_05 \\
+		\textbf{Agua ({H2O})} & \multicolumn{3}{c}{200 mL} \\
+		\textbf{Tiempo} & \multicolumn{3}{c}{4 min (se consideraron 5 min)} \\
+		\textbf{Temperatura} & \multicolumn{3}{c}{92\,\textdegree C} \\
+		\bottomrule
+	\end{tabular}
+\end{table} \newpage
+
+\section*{Preparación de café - Muestras Veracruz}
+
+\begin{enumerate}
+	\item Se prepararan 4 muestras con distintas cantidades de café (no importa el orden):
+	\begin{itemize}
+		\item 1$^{\text{ra}}$ muestra: 15 g
+		\item 2$^{\text{da}}$ muestra: 7.5 g
+		\item 3$^{\text{ra}}$ muestra: 18 g
+		\item 4$^{\text{ta}}$ muestra: 22.5 g
+	\end{itemize}
+	
+	\item Todas las muestras preparadas con la misma cantidad de agua: \textbf{200 mL}.
+	
+	\item La temperatura máxima del agua debe ser de \textbf{93\,$^\circ$C}.
+	
+	\item Dejar reposar cada muestra durante \textbf{5 minutos} en la prensa antes de llevar a espectrómetro y continuar con el análisis.
+	
+	\item El agua se calentó hasta que comenzó a hervir.
+	
+	\begin{itemize}
+		\item \textbf{Spark value} (software para análisis)
+		\item \textbf{Termómetro de spark value}
+		\item \textbf{GUI (graphic user interface) (iPad)} para control y visualización de datos.
+	\end{itemize}
+\end{enumerate} \vfill
+
+\vspace{0.5cm}
+
+\section{Prueba de laboratorio — Café Veracruz (Ve)} \vspace{0.5cm}
+
+\subsection*{Pesaje de las muestras}
+\begin{itemize}
+	\item $1^\text{ra}$ Muestra: 15.0 g $\Rightarrow$ \textbf{real}: 15.1013 g
+	\item $2^\text{da}$ Muestra: 7.5 g $\Rightarrow$ \textbf{real}: 7.5136 g
+	\item $3^\text{ra}$ Muestra: 18.0 g $\Rightarrow$ \textbf{real}: 18.0874 g
+	\item $4^\text{ta}$ Muestra: 22.5 g $\Rightarrow$ \textbf{real}: 22.5737 g
+\end{itemize} \vspace{0.5cm}
+
+La muestra de agua utilizada en cada extracción alcanza temperaturas entre 90 y 95.3°C. Todas las preparaciones se hicieron con \textbf{200 ml} de agua, y se purgó previamente la prensa francesa.
+
+---
+
+\subsection{Preparación con muestra de 7.5 g}
+
+\begin{itemize}
+	\item Se calienta agua para purgar la prensa francesa (90–94°C).
+	\item Se colocan \textbf{200 ml} de agua para la extracción.
+	\item Se añade café de muestra (7.5136 g) a la prensa.
+	\item Se espera 1 minuto para que el agua (a 95°C) enfríe ligeramente.
+	\item Se realiza una preinfusión de 30 segundos para liberar CO\textsubscript{2}.
+	\item Se vierte el resto del agua, se remueve y se deja reposar por 5 minutos.
+	\item A las 12:33 del 19/06/2025, se extrae y cuela el café.
+\end{itemize}
+
+La temperatura del agua al verterse fue de \textbf{93°C}. \underline{(Investigar el principio de enfriamiento de Newton)}.
+
+Posteriormente, la muestra fue llevada al espectrómetro para medir:
+\begin{itemize}
+	\item \textcolor{Cinnabar}{\textbf{Absorbancia}}
+	\item \textcolor{Apple Green}{\textbf{Transmitancia}}
+\end{itemize}
+
+---
+
+\subsection{Preparación con muestra de 18 g}
+
+\begin{itemize}
+	\item Agua para purgar la prensa: 91–92°C.
+	\item Se colocan 200 ml para preparar café con 18.0874 g.
+\end{itemize}
+
+\subsubsection*{Ratio de extracción}
+\[
+\frac{200 \, \text{ml}}{18 \, \text{g}} = 11.\overline{11} \quad \Rightarrow \quad \textbf{Ratio: } 1:11.\overline{11}
+\]
+
+\begin{itemize}
+	\item Se purga la prensa.
+	\item Se hace preinfusión de 30 seg.
+	\item Se vierte el resto del agua y se deja reposar 5 minutos.
+	\item A las 13:43 del 19/06/2025 se extrae el café.
+\end{itemize}
+
+El café resultante fue notablemente más concentrado, posiblemente debido al ratio más bajo que el estándar (\textit{1:14} a \textit{1:16}).
+
+---
+
+\subsection{Preparación con muestra de 22.5 g}
+
+\begin{itemize}
+	\item Se calienta agua para purgar la prensa (92–93°C).
+	\item Se colocan 200 ml para preparar café con 22.5737 g.
+	\item Se hace preinfusión de 30 seg para liberar CO\textsubscript{2}.
+	\item Se vierte el resto del agua y se deja reposar por 5 minutos.
+	\item Infusión inicia a las 14:09 y finaliza a las 14:14 del 19/06/2025.
+\end{itemize}
+
+\subsubsection*{Ratio de extracción}
+\[
+\frac{200 \, \text{ml}}{22.5 \, \text{g}} = 8.88 \quad \Rightarrow \quad \textbf{Ratio: } 1:8.88
+\]
+
+
+
+
+
+\printbibliography[heading=bibintoc]
+
+
+
+
+\end{document}
