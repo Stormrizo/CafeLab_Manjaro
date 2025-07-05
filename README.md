@@ -7,8 +7,8 @@ Este proyecto se centra en el estudio de las propiedades de distintas muestras d
 - **Martín Rodolfo Palomino Merino**  
   Profesor investigador, jefe responsable del laboratorio de caracteización de materiales (FCFM-BUAP).
 
-- **Lizeth Jazmín Orozco García**  
+- **Lizeth Jazmín Orozco García (Santiago de Querétaro, Querétaro)**  
   Principal responsable del proyecto
 
-- **Julio Alfredo Ballinas García**  
+- **Julio Alfredo Ballinas García (Tuxtla Gutiérrez, Chiapas)**  
   Colaborador del proyecto
