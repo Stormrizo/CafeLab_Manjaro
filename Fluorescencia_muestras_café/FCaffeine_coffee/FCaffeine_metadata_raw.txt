@@ -1,0 +1,46 @@
+Cafeína
+Fecha del experimento: 17 de junio de 2025
+
+[EXP_FD_FILE]
+EXPERIMENT SUMMARY:
+Experiment Type: Spectral Acquisition[Emission]
+Experiment Comment: Spectral Acquisition[Emission]
+
+
+GENERAL PARAMETERS:
+Data Identifier: DfltEm
+Number of Data Points: 481
+Integration Time: 0.100000s
+
+EM1: IHR 320 (Mono1)
+Start: 370.00nm
+End: 850.00nm
+Increment: 1.00nm
+Side Entrance Slit: 5.00 nmBandpass 
+Front Exit Slit: 5.00 nmBandpass 
+Side Exit Slit: 5.00 nmBandpass 
+Grating: Density 1200 (Blaze: 500)
+
+EX1: Excitation 1 (Mono2)
+Park: 325.00nm
+Side Entrance Slit: 5.00 nmBandpass 
+Side Exit Slit: 5.00 nmBandpass 
+First Intermediate Slit: 5.00 nmBandpass 
+Grating: Density 1200 (Blaze: 330)
+
+Detector: S2 (SCD2)
+Units: CPS
+
+Detector Accumulations: 1
+Accumulations Mode: None
+Detector Cycles: 1
+
+
+ACCESSORIES:
+
+Warning: detector saturation limit exceeded.
+
+[CFG_FD_INFO]
+
+[EXP_FILE]
+<EXPERIMENT><general expFileVersion="3.0" projectName="FL3-2iHR_1396C-0311-FL" resultsFile="DfltEm" resultsDir="C:\Users\Public\Documents\Jobin Yvon\Data" resultsFileAutoInc="0" resultsFileAutoIncValue="0" resultsDirAutoInc="0" resultsDirAutoIncValue="0" fireCollect="1" autoSaveData="1" dataSaveMode="1" expSaveMode="0" comment="Spectral Acquisition[Emission]" templateClass="1" templateType="1" dataAxis="1" interleavedAxis="0" PolarizationFormat="2" UseGFactor="0" GFactor="0" QuickPolarization="0" IsBlankPolarization="0" AnisoMaxTrials="0" AnisoStdError="0" CWASampleType="-1"><accumulations accuNumber="1" accuMode="1"/><cycles cycleNumber="1" cycleMode="1" cycleValue="0"/><optionalParameters CosmicRemoval="0" CosmicRemovalMethod="5" CosmicRemovalParam="0.1" CosmicRemovalParam2="1000" rangeModeEnabled="0" rangeBegin="-1" rangeEnd="-1" rangeOverlap="0"/><files ccdBlankSubtractEnabled="0" ccdBlankSubtractFile="" ccdCorrectionEnabled="0" ccdCorrectionFile=""/><displayOptions displayType="0" XDisplayType="0" updateFrequency="1" noIntermediateDisplay="0" noGraph="0" HideForIntermediateDisplay="0"/><RayleighMasking FirstOrderEnabled="0" SecondOrderEnabled="0" SlitWidth="0"/><ltOptions ltConditional="0" ltAccumType="1" ltStdValue="0" ltTimeIncrement="1" ltTotalTime="6" ltMinValue="1" ltMaxValue="1" ltStdError="-1" ltIntegrationTime="0.1" ltNumberOfSamples="0" ltNumberOfAvgs="0" ltNumberOfGroups="0" ltADGFactor="-1" ltADMeasureLT="0" ltADPolStdPositions="0" ltADPolUnkPositions="0" ltStdPositions="0" ltUnkPositions="0" ltStdState="0" ltStdFileName=""/></general><specific><samples/></specific><Units><Unit Type="1" Value="3"/><Unit Type="2" Value="6"/><Unit Type="3" Value="14"/><Unit Type="4" Value="25"/><Unit Type="7" Value="31"/><LaserLine LaserLineValue="500"/></Units><Overlays/><Correction><SCD1 darkEnabled="0" blankEnabled="0" blankFile="" correctionEnabled="0"/><SCD2 darkEnabled="0" blankEnabled="0" blankFile="" correctionEnabled="0"/></Correction><dataObjects><RawSignal Description="SIGNAL_001"><Signal DeviceID="SCD2" SignalIndex="1"/></RawSignal></dataObjects><StartOps><Op Action="1" Command="2" Priority="1" Type="5" Device="Mono2" AxisBound="0" AxisIndex="0" AbsoluteAxisIndex="-1" Subpriority="-100"><Parameters><Param Type="2" Value="325"/><Param Type="38" Value="0"/></Parameters></Op><Op Action="1" Command="2" Priority="1" Type="5" Device="Mono2" AxisBound="0" AxisIndex="0" AbsoluteAxisIndex="-1" Subpriority="-100"><Parameters><Param Type="2" Value="5"/><Param Type="5" Value="1"/><Param Type="6" Value="1"/></Parameters></Op><Op Action="1" Command="2" Priority="1" Type="5" Device="Mono2" AxisBound="0" AxisIndex="0" AbsoluteAxisIndex="-1" Subpriority="-100"><Parameters><Param Type="2" Value="5"/><Param Type="5" Value="1"/><Param Type="6" Value="3"/></Parameters></Op><Op Action="1" Command="2" Priority="1" Type="5" Device="Mono2" AxisBound="0" AxisIndex="0" AbsoluteAxisIndex="-1" Subprio																															
