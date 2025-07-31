@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte de Absorbancia UV-Vis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 40px;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    h1 {
+      color: #111;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    .lab {
+      margin-top: 40px;
+      font-size: 0.95em;
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-left: 6px solid #009879;
+    }
+    .styled-table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 1em;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .styled-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+    .styled-table th, .styled-table td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+    }
+    .styled-table tbody tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    .conclusion {
+      margin-top: 40px;
+    }
+    .plotly-graph-div {
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reporte de Absorbancia UV-Vis - Café Illy</h1>
+
+  <div class="info">
+    <p><strong>Fecha:</strong> 07-07-2025 09:10:13</p>
+  </div>
+
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js" integrity="sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q=" crossorigin="anonymous"></script>                <div id="28e7be15-b116-447e-b7c1-9d86c7933176" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("28e7be15-b116-447e-b7c1-9d86c7933176")) {                    Plotly.newPlot(                        "28e7be15-b116-447e-b7c1-9d86c7933176",                        [{"mode":"lines","name":"AIlly","x":{"dtype":"f8","bdata":"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"},"y":{"dtype":"f8","bdata":"z\u002fdT46Wb\u002fj9vEoPAyqH9P42XbhKDwPw\u002fK4cW2c73+z\u002fdJAaBlUP7P\u002fp+arx0k\u002fo\u002fgZVDi2zn+T9zaJHtfD\u002f5Pzm0yHa+n\u002fg\u002f1XjpJjEI+D+wcmiR7Xz3P\u002fYoXI\u002fC9fY\u002fexSuR+F69j\u002fVeOkmMQj2P5qZmZmZmfU\u002fXrpJDAIr9T+Nl24Sg8D0PycxCKwcWvQ\u002fAAAAAAAA9D+uR+F6FK7zP1yPwvUoXPM\u002f30+Nl24S8z\u002fNzMzMzMzyP7pJDAIrh\u002fI\u002fEoPAyqFF8j\u002fVeOkmMQjyPwIrhxbZzvE\u002fxSCwcmiR8T\u002fy0k1iEFjxPx+F61G4HvE\u002f4XoUrkfh8D8OLbKd76fwPzvfT42XbvA\u002f001iEFg58D9qvHSTGATwP9nO91Pjpe8\u002f3SQGgZVD7z\u002fhehSuR+HuP7pJDAIrh+4\u002fkxgEVg4t7j9CYOXQItvtP\u002fCnxks3ie0\u002fc2iR7Xw\u002f7T\u002f2KFyPwvXsPyPb+X5qvOw\u002fexSuR+F67D99PzVeuknsP6rx0k1iEOw\u002frBxaZDvf6z+uR+F6FK7rP7ByaJHtfOs\u002fXI\u002fC9Shc6z8IrBxaZDvrP7TIdr6fGus\u002fYOXQItv56j\u002fhehSuR+HqP2IQWDm0yOo\u002f46WbxCCw6j85tMh2vp\u002fqP4\u002fC9Shcj+o\u002f5dAi2\u002fl+6j8QWDm0yHbqPzvfT42Xbuo\u002fO99PjZdu6j9mZmZmZmbqP2ZmZmZmZuo\u002fZmZmZmZm6j9mZmZmZmbqP2ZmZmZmZuo\u002fZmZmZmZm6j9mZmZmZmbqPzvfT42Xbuo\u002fO99PjZdu6j8QWDm0yHbqP7pJDAIrh+o\u002fZDvfT42X6j\u002fjpZvEILDqP2IQWDm0yOo\u002f4XoUrkfh6j9g5dAi2\u002fnqP99PjZduEus\u002fMzMzMzMz6z+yne+nxkvrPwaBlUOLbOs\u002fhetRuB6F6z8EVg4tsp3rP4PAyqFFtus\u002f16NwPQrX6z8AAAAAAADsP\u002f7UeOkmMew\u002f\u002fKnx0k1i7D\u002f6fmq8dJPsPyPb+X5qvOw\u002fTDeJQWDl7D91kxgEVg7tP57vp8ZLN+0\u002f8tJNYhBY7T9GtvP91HjtP8UgsHJoke0\u002fbxKDwMqh7T\u002fufD81XrrtP23n+6nx0u0\u002f7FG4HoXr7T9qvHSTGATuP+kmMQisHO4\u002faJHtfD817j\u002fn+6nx0k3uP2ZmZmZmZu4\u002fO99PjZdu7j8QWDm0yHbuP+XQItv5fu4\u002f5dAi2\u002fl+7j8QWDm0yHbuPzvfT42Xbu4\u002fke18PzVe7j\u002fn+6nx0k3uP2iR7Xw\u002fNe4\u002f6SYxCKwc7j9qvHSTGATuP8HKoUW28+0\u002fQmDl0CLb7T\u002fD9Shcj8LtP28Sg8DKoe0\u002fGy\u002fdJAaB7T\u002fHSzeJQWDtP0jhehSuR+0\u002fH4XrUbge7T\u002fLoUW28\u002f3sP83MzMzMzOw\u002fpHA9Ctej7D+mm8QgsHLsP6jGSzeJQew\u002fqvHSTWIQ7D\u002fXo3A9CtfrPy\u002fdJAaBles\u002fXI\u002fC9Shc6z+JQWDl0CLrP4ts5\u002fup8eo\u002fuB6F61G46j\u002fl0CLb+X7qPz0K16NwPeo\u002farx0kxgE6j\u002fD9Shcj8LpPxsv3SQGgek\u002fSOF6FK5H6T91kxgEVg7pP6JFtvP91Og\u002fz\u002fdT46Wb6D\u002f8qfHSTWLoP\u002f7UeOkmMeg\u002fAAAAAAAA6D+sHFpkO9\u002fnP4PAyqFFtuc\u002fWmQ730+N5z8xCKwcWmTnP90kBoGVQ+c\u002ftMh2vp8a5z9g5dAi2\u002fnmPwwCK4cW2eY\u002fuB6F61G45j85tMh2vp\u002fmP7pJDAIrh+Y\u002fEFg5tMh25j+R7Xw\u002fNV7mPxKDwMqhReY\u002fkxgEVg4t5j\u002fpJjEIrBzmPz81XrpJDOY\u002flkOLbOf75T\u002fByqFFtvPlPxfZzvdT4+U\u002fbef7qfHS5T+YbhKDwMrlP5huEoPAyuU\u002fw\u002fUoXI\u002fC5T\u002fufD81XrrlP0SLbOf7qeU\u002fbxKDwMqh5T+amZmZmZnlP8UgsHJokeU\u002f8KfGSzeJ5T8bL90kBoHlP0a28\u002f3UeOU\u002fRrbz\u002fdR45T9GtvP91HjlP3E9CtejcOU\u002fcT0K16Nw5T9xPQrXo3DlP5zEILByaOU\u002fnMQgsHJo5T+cxCCwcmjlP5zEILByaOU\u002fnMQgsHJo5T+cxCCwcmjlP3E9CtejcOU\u002fcT0K16Nw5T9GtvP91HjlP0a28\u002f3UeOU\u002fGy\u002fdJAaB5T9GtvP91HjlPxsv3SQGgeU\u002fGy\u002fdJAaB5T8bL90kBoHlPxsv3SQGgeU\u002fRrbz\u002fdR45T9GtvP91HjlP3E9CtejcOU\u002fcT0K16Nw5T9xPQrXo3DlP0a28\u002f3UeOU\u002fRrbz\u002fdR45T9GtvP91HjlP3E9CtejcOU\u002fx0s3iUFg5T\u002fy0k1iEFjlP0jhehSuR+U\u002fc2iR7Xw\u002f5T9zaJHtfD\u002flP57vp8ZLN+U\u002fyXa+nxov5T\u002f0\u002fdR46SblP0oMAiuHFuU\u002fy6FFtvP95D8hsHJoke3kP3e+nxov3eQ\u002fzczMzMzM5D8j2\u002fl+arzkP6RwPQrXo+Q\u002fUI2XbhKD5D\u002fRItv5fmrkP1K4HoXrUeQ\u002f001iEFg55D9\u002farx0kxjkPwAAAAAAAOQ\u002fgZVDi2zn4z8tsp3vp8bjP9nO91PjpeM\u002fhetRuB6F4z8GgZVDi2zjP4cW2c73U+M\u002fCKwcWmQ74z\u002ffT42XbhLjP7bz\u002fdR46eI\u002fjZduEoPA4j+PwvUoXI\u002fiP5HtfD81XuI\u002fkxgEVg4t4j9qvHSTGATiP0Jg5dAi2+E\u002fw\u002fUoXI\u002fC4T8ZBFYOLbLhP28Sg8DKoeE\u002f8KfGSzeJ4T\u002fy0k1iEFjhP\u002fT91HjpJuE\u002fy6FFtvP94D+iRbbz\u002fdTgP3npJjEIrOA\u002fppvEILBy4D\u002fTTWIQWDngPwAAAAAAAOA\u002fBFYOLbKd3z8GgZVDi2zfP1yPwvUoXN8\u002fCKwcWmQ73z9g5dAi2\u002fneP2Q730+Nl94\u002farx0kxgE3j9vEoPAyqHdP3E9CtejcN0\u002fGy\u002fdJAaB3T9xPQrXo3DdP3Noke18P90\u002fd76fGi\u002fd3D97FK5H4XrcP9NNYhBYOdw\u002f001iEFg53D8nMQisHFrcPycxCKwcWtw\u002ff2q8dJMY3D8tsp3vp8bbPzEIrBxaZNs\u002f30+Nl24S2z+Nl24Sg8DaP4\u002fC9Shcj9o\u002fj8L1KFyP2j\u002fjpZvEILDaPzm0yHa+n9o\u002f5\u002fup8dJN2j9CYOXQItvZP5zEILByaNk\u002f9P3UeOkm2T+gGi\u002fdJAbZP6AaL90kBtk\u002foBov3SQG2T\u002f2KFyPwvXYP6JFtvP91Ng\u002fUI2XbhKD2D8AAAAAAADYP7ByaJHtfNc\u002ftMh2vp8a1z+0yHa+nxrXP7Kd76fGS9c\u002fsHJoke181z9aZDvfT43XP1pkO99Pjdc\u002fWmQ730+N1z+wcmiR7XzXPwrXo3A9Ctc\u002fEoPAyqFF1j8bL90kBoHVPx1aZDvfT9U\u002fGQRWDi2y1T+8dJMYBFbWP2IQWDm0yNY\u002fYOXQItv51j9g5dAi2\u002fnWP7bz\u002fdR46dY\u002fZDvfT42X1j9qvHSTGATWPxsv3SQGgdU\u002fy6FFtvP91D8lBoGVQ4vUP39qvHSTGNQ\u002f2c73U+Ol0z\u002fdJAaBlUPTP90kBoGVQ9M\u002f2\u002fl+arx00z\u002fXo3A9CtfTP39qvHSTGNQ\u002ff2q8dJMY1D\u002fVeOkmMQjUPyuHFtnO99M\u002f16NwPQrX0z+F61G4HoXTP+F6FK5H4dI\u002fke18PzVe0j\u002fpJjEIrBzSPz0K16NwPdI\u002fO99PjZdu0j8730+Nl27SPz81XrpJDNI\u002f8KfGSzeJ0T+gGi\u002fdJAbRP\u002fp+arx0k9A\u002f\u002ftR46SYx0D+sHFpkO9\u002fPP6wcWmQ7388\u002fqMZLN4lB0D+kcD0K16PQP\u002fhT46WbxNA\u002fppvEILBy0D9YObTIdr7PP7gehetRuM4\u002fEFg5tMh2zj8QWDm0yHbOP2Q730+Nl84\u002fvHSTGARWzj\u002fByqFFtvPNP8UgsHJokc0\u002fHVpkO99PzT8hsHJoke3MP30\u002fNV66Scw\u002fLbKd76fGyz+F61G4HoXLPzVeukkMAss\u002fPQrXo3A9yj\u002fy0k1iEFjJP05iEFg5tMg\u002fppvEILByyD\u002f6fmq8dJPIP6JFtvP91Mg\u002fSgwCK4cWyT+iRbbz\u002fdTIP\u002f7UeOkmMcg\u002fCtejcD0Kxz9qvHSTGATGPxsv3SQGgcU\u002fbxKDwMqhxT8="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"margin":{"l":40,"r":40,"t":80,"b":40},"title":{"text":"Curva de absorbancia - Café Illy"},"xaxis":{"title":{"text":"Longitud de onda (nm)"}},"yaxis":{"title":{"text":"Absorbancia"}},"legend":{"title":{"text":"Muestra (gramos)"}}},                        {"responsive": true}                    )                };            </script>        </div>
+
+  <h2>Métrica espectral de la muestra</h2>
+  <table class="dataframe styled-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Muestra</th>
+      <th>Máx. Abs.</th>
+      <th>Mín. Abs.</th>
+      <th>Promedio</th>
+      <th>Desv. Estándar</th>
+      <th>AUC</th>
+      <th>λ máx (nm)</th>
+      <th>λ mín (nm)</th>
+      <th>100–200 nm</th>
+      <th>200–300 nm</th>
+      <th>300–400 nm</th>
+      <th>400–500 nm</th>
+      <th>500–600 nm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AIlly</td>
+      <td>1.913</td>
+      <td>0.168</td>
+      <td>0.683</td>
+      <td>0.318</td>
+      <td>128.91</td>
+      <td>217.0</td>
+      <td>405.5</td>
+      <td>—</td>
+      <td>0.958168</td>
+      <td>0.484070</td>
+      <td>0.187769</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+  <div>
+    <p>Los espectros obtenidos muestran perfiles característicos en función del gramaje y tipo de muestra. La evaluación de zonas espectrales permite correlacionar la respuesta óptica con la presencia de compuestos activos del café.</p>
+  </div>
+
+  <div class="lab">
+    <strong>Nombre del proyecto: CafeLab</strong><br><br>
+    <strong>Colaboradores:</strong><br>
+    Martín Rodolfo Palomino Merino – Profesor investigador, jefe responsable del laboratorio de caracterización de materiales (FCFM-BUAP).<br>
+    Lizeth Jazmín Orozco García – Colaborador principal.<br>
+    Julio Alfredo Ballinas García – Colaborador del proyecto.
+  </div>
+
+</body>
+</html>
