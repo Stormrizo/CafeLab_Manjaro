@@ -8,7 +8,7 @@
 #       format_version: '1.3'
 #       jupytext_version: 1.17.2
 #   kernelspec:
-#     display_name: ydata-env
+#     display_name: Python 3
 #     language: python
 #     name: python3
 # ---
@@ -64,7 +64,8 @@ from datetime import datetime
 # === Cargar datos de FOx ===
 df = pd.read_csv("FVerde_data.csv")
 df["CPS"] = pd.to_numeric(df["CPS"], errors="coerce")
-df = df[df["CPS"] <= 1e6].dropna()
+# df = df[df["CPS"] <= 1e6].dropna()  ← ❌ eliminar esta línea
+df = df.dropna()  # ✅ conserva todos los valores
 
 # === Definir regiones espectrales ===
 regiones = {
@@ -118,7 +119,7 @@ fig.add_trace(go.Scatter(
     name="FOx_data"
 ))
 fig.update_layout(
-    title="Curva de intensidad espectral - Muestra FVerde",
+    title="Espectro de fluorescencia de la muestra de café oro verde (FVerde)", 
     xaxis_title="Longitud de onda (nm)",
     yaxis_title="Intensidad (CPS)",
     legend_title="Muestra",
@@ -136,7 +137,7 @@ html_final = f"""
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Reporte de Intensidad UV-Vis - Muestra FVerde</title>
+  <title>Reporte de espectro de fluorescencia - Muestra FVerde </title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {{
@@ -188,7 +189,7 @@ html_final = f"""
 </head>
 <body>
 
-  <h1>Reporte de Intensidad UV-Vis - Muestra FVerde</h1>
+  <h1>Reporte de espectro de fluorescencia - Muestra FVerde</h1>
 
   <div class="info">
     <p><strong>Fecha:</strong> {fecha}</p>
@@ -216,13 +217,15 @@ html_final = f"""
 """
 
 
-with open("reporte_absorbancia.html", "w", encoding="utf-8") as f:
+with open("Reporte_FVerde.html", "w", encoding="utf-8") as f:
     f.write(html_final)
 
-print("✅ Reporte generado: reporte_absorbancia.html")
+print("✅ Reporte generado: Reporte_FVerde.html")
 
 # Mostrar gráfico si estás en Jupyter o interactivo
 fig.show()
 
 print("Rango de longitudes de onda:", df['nm'].min(), "a", df['nm'].max())
 
+
+# %%

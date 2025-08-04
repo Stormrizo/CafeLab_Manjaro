@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte de espectro de fluorescencia - Muestra FCh</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 40px;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    h1 {
+      color: #111;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    .lab {
+      margin-top: 40px;
+      font-size: 0.95em;
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-left: 6px solid #009879;
+    }
+    .styled-table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 1em;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .styled-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+    .styled-table th, .styled-table td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+    }
+    .styled-table tbody tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    .plotly-graph-div {
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reporte de espectro de fluorescencia - Muestra FCh</h1>
+
+  <div class="info">
+    <p><strong>Fecha:</strong> 04-08-2025 01:32:32</p>
+  </div>
+
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js" integrity="sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q=" crossorigin="anonymous"></script>                <div id="5aadbffe-bb5d-44ee-913a-d7dc11af99b7" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5aadbffe-bb5d-44ee-913a-d7dc11af99b7")) {                    Plotly.newPlot(                        "5aadbffe-bb5d-44ee-913a-d7dc11af99b7",                        [{"mode":"lines","name":"FOx_data","x":{"dtype":"i2","bdata":"cgFzAXQBdQF2AXcBeAF5AXoBewF8AX0BfgF\u002fAYABgQGCAYMBhAGFAYYBhwGIAYkBigGLAYwBjQGOAY8BkAGRAZIBkwGUAZUBlgGXAZgBmQGaAZsBnAGdAZ4BnwGgAaEBogGjAaQBpQGmAacBqAGpAaoBqwGsAa0BrgGvAbABsQGyAbMBtAG1AbYBtwG4AbkBugG7AbwBvQG+Ab8BwAHBAcIBwwHEAcUBxgHHAcgByQHKAcsBzAHNAc4BzwHQAdEB0gHTAdQB1QHWAdcB2AHZAdoB2wHcAd0B3gHfAeAB4QHiAeMB5AHlAeYB5wHoAekB6gHrAewB7QHuAe8B8AHxAfIB8wH0AfUB9gH3AfgB+QH6AfsB\u002fAH9Af4B\u002fwEAAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISAhMCFAIVAhYCFwIYAhkCGgIbAhwCHQIeAh8CIAIhAiICIwIkAiUCJgInAigCKQIqAisCLAItAi4CLwIwAjECMgIzAjQCNQI2AjcCOAI5AjoCOwI8Aj0CPgI\u002fAkACQQJCAkMCRAJFAkYCRwJIAkkCSgJLAkwCTQJOAk8CUAJRAlICUwJUAlUCVgJXAlgCWQJaAlsCXAJdAl4CXwJgAmECYgJjAmQCZQJmAmcCaAJpAmoCawJsAm0CbgJvAnACcQJyAnMCdAJ1AnYCdwJ4AnkCegJ7AnwCfQJ+An8CgAKBAoICgwKEAoUChgKHAogCiQKKAosCjAKNAo4CjwKQApECkgKTApQClQKWApcCmAKZApoCmwKcAp0CngKfAqACoQKiAqMCpAKlAqYCpwKoAqkCqgKrAqwCrQKuAq8CsAKxArICswK0ArUCtgK3ArgCuQK6ArsCvAK9Ar4CvwLAAsECwgLDAsQCxQLGAscCyALJAsoCywLMAs0CzgLPAtAC0QLSAtMC1ALVAtYC1wLYAtkC2gLbAtwC3QLeAt8C4ALhAuIC4wLkAuUC5gLnAugC6QLqAusC7ALtAu4C7wLwAvEC8gLzAvQC9QL2AvcC+AL5AvoC+wL8Av0C\u002fgL\u002fAgADAQMCAwMDBAMFAwYDBwMIAwkDCgMLAwwDDQMOAw8DEAMRAxIDEwMUAxUDFgMXAxgDGQMaAxsDHAMdAx4DHwMgAyEDIgMjAyQDJQMmAycDKAMpAyoDKwMsAy0DLgMvAzADMQMyAzMDNAM1AzYDNwM4AzkDOgM7AzwDPQM+Az8DQANBA0IDQwNEA0UDRgNHA0gDSQNKA0sDTANNA04DTwNQA1EDUgM="},"y":{"dtype":"i4","bdata":"croAAFzQAADo3wAAZPAAAPgBAQAMIAEAwDQBANJFAQD4WwEALG4BAOpzAQCWkAEADqUBABCyAQBuwgEAyugBAJzzAQDI\u002fgEAQBMCAMouAgBSOAIAQkgCAP5eAgBGUwIA5HMCAIB9AgDQjAIAPLICABy+AgAGxQIAlsYCAMDYAgDI1QIAaOUCABbnAgB8\u002fgIAUgUDAKoHAwA0IwMAsg4DANodAwD+JgMAeiMDAAA5AwDuTwMASEYDAL5NAwAgUAMAMGMDAIRaAwDibwMAzGwDAIp8AwA8XAMAuGIDAM5vAwBGhAMAQn4DAB51AwBcjAMAhnYDAEx5AwBqjQMA0IEDAH50AwBemQMA8JMDAMSSAwAKiQMAiqQDADaPAwDgjwMAkJQDAEKDAwDKjAMAXpQDABKQAwAajQMAWIEDAIihAwDwjgMA1nYDALKQAwDSmAMAyowDAEKSAwDugQMA7JIDAFyWAwDmegMAWHIDALaCAwBqkgMALn4DAP6AAwB2gQMADJEDANqGAwAYhQMAsIgDALKGAwBIfQMAEI0DADSHAwDQhgMA1JsDAJyDAwDqlAMAWJADALSJAwBylAMAhJsDAACYAwBAlAMAUqUDAA6UAwC8mgMANp4DAHidAwC0mAMAvqwDAOibAwD8qgMAspUDAGSdAwCungMAmp4DACSXAwBydgMA8pYDAESaAwAkkgMAjpsDAF6KAwDKmwMAbIsDAJqPAwAIhgMAbokDALyGAwByjwMAOJcDAMSIAwDUggMAEIMDAKiQAwBCeQMA2oYDAOqAAwBUdgMAeHoDAJB2AwD2VgMA8HoDALB0AwDkbQMAGnQDAEhuAwDCZwMAXmcDADRpAwAoVwMARF4DACBkAwAyUgMA6l0DAJxRAwBkTQMAVE4DADpKAwASSgMA4kwDAOgyAwB4NAMA\u002fiEDABg6AwCaMAMAXCgDAKwAAwCaIQMAfh8DAEYWAwCECgMA5BMDADTnAgAQAQMAyP0CABD8AgC07gIAzugCABbsAgAM4gIAGOACAHDTAgCQ2wIAyNACABTGAgCK0gIAJMoCAPSzAgBItQIA4rECANapAgAOpAIAdKICABifAgAGkwIALJUCAOKJAgDygwIAFIoCAMZzAgD4bgIAPmoCAE5zAgBUVAIApmsCAGxQAgCGSgIAVlICAPA1AgA6QQIAzEACACAkAgAKMAIA1jECAEYcAgBaJgIAeBICAFYWAgDuCgIAogsCAGoHAgDs+AEAdPMBAFrlAQAa5AEA3uMBAE7sAQDk3QEAYMsBAPrMAQD2wQEABsEBAIitAQDqrwEADq8BAEakAQB6nQEAEJkBAAiSAQDuiAEAZIYBAFx\u002fAQDmfAEA4nYBAKx1AQDGZQEAIGYBAAhbAQCSWAEAClkBAFZJAQDKPgEAakkBAHI8AQCqMQEAZDEBAE4pAQCKGgEAwBsBANwYAQBsEAEAxgYBAAYDAQAC\u002fQAAsgEBAGz3AADo7gAAWPcAAP77AAC48QAA1O4AABr0AACY6QAAaPEAAPbqAAA46gAAwucAABrgAAAQ5QAAiuMAAGjdAACS5QAA6t0AAALfAAAq2gAAaNMAACrQAABszwAA2soAAIrPAAC0yAAAzscAAILDAABAvwAAKrcAANa1AACIrgAAwKgAAMSpAACCoAAA+KIAAFyeAABIngAAcJkAADCYAACMkQAAro0AAJ6JAAAGhgAA9IMAAJiAAABuggAAsnoAADh8AADqdAAAJnUAAC5tAACicQAA3mwAAJZpAAAaYwAAOGMAAHJlAAA2YAAAwmAAAEZaAAA2VgAAxFkAAFpVAABaUAAAJlIAABhMAACyTQAA\u002fEkAAFBLAAC2SQAAhkcAAERIAAAWRAAAUEEAAFxEAAAEQgAAWD4AAFg5AADiOwAA2jkAAMQ7AAAeNwAA4DgAAEAzAAACNQAAVjYAAKAyAACaMwAAPjAAAIovAAB8LgAACC8AAOYtAAAKLQAAaiwAAOYtAAB2KgAAuiwAABwqAAC0KAAA8CgAADwoAABsJQAAOCcAAAAjAAD4JQAAHCUAAOIiAACQJAAAViIAAGQjAAAuIgAAcCEAAAYiAAAEJAAAxiAAAOofAAB8HwAApB8AAK4fAAAOHwAAwh8AAP4fAABkHgAAgh4AANQcAAAUHgAAnB0AAC4dAABmHAAArhoAAMAcAADwGQAASBwAAL4ZAABiGwAA+hkAAG4ZAAA8GQAAPBkAAFwXAAB+GAAA\u002fBcAAFwXAADqFQAASBcAAAgWAACkFQAAmhUAAEAVAAAsFQAAchUAAOgSAACcEwAAphMAAEwTAABCEwAAXBIAAKgRAAAGEwAASBIAAC4TAAAEEAAA9g4AALIRAAAUDwAAag4AAPYOAAAiEAAAUA8AALoOAADoDQAAJA4AACQOAACEDQAAigwAADAMAAAwDAAApAsAAJQMAADwCgAArgsAANgJAACwCQAAOAkAAA4LAABQCgAA6AgAAOgIAAAGCQAAyggAAHAIAACKBwAAsgcAAFgHAADgBgAAFggAAIYGAAAiBgAAcgYAANIFAAAiBgAAtAUAAA=="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"margin":{"l":40,"r":40,"t":80,"b":40},"title":{"text":"Espectro de fluorescencia de la muestra de Chiapas (FCh)"},"xaxis":{"title":{"text":"Longitud de onda (nm)"}},"yaxis":{"title":{"text":"Intensidad (CPS)"}},"legend":{"title":{"text":"Muestra"}}},                        {"responsive": true}                    )                };            </script>        </div>
+
+  <h2>Métricas espectrales</h2>
+  <table class="dataframe styled-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Muestra</th>
+      <th>Máx. CPS</th>
+      <th>Mín. CPS</th>
+      <th>Promedio</th>
+      <th>Desv. Estándar</th>
+      <th>AUC</th>
+      <th>λ máx (nm)</th>
+      <th>λ mín (nm)</th>
+      <th>300–400 nm</th>
+      <th>400–500 nm</th>
+      <th>500–600 nm</th>
+      <th>600–700 nm</th>
+      <th>700–800 nm</th>
+      <th>800–900 nm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FOx_data</td>
+      <td>240830.000</td>
+      <td>1460.000</td>
+      <td>113246.320</td>
+      <td>91764.982</td>
+      <td>54446885.00</td>
+      <td>490.0</td>
+      <td>850.0</td>
+      <td>119792.258065</td>
+      <td>226655.148515</td>
+      <td>196361.683168</td>
+      <td>71592.772277</td>
+      <td>12118.910891</td>
+      <td>3194.705882</td>
+    </tr>
+  </tbody>
+</table>
+
+  <div>
+    <p>Este espectro muestra el perfil de respuesta óptica de la muestra FCh, con análisis cuantitativo por zonas espectrales específicas. La información obtenida puede relacionarse con compuestos funcionales presentes en la muestra.</p>
+  </div>
+
+  <div class="lab">
+    <strong>Nombre del proyecto: CafeLab</strong><br><br>
+    <strong>Colaboradores:</strong><br>
+    Martín Rodolfo Palomino Merino – Profesor investigador, jefe responsable del laboratorio de caracterización de materiales (FCFM-BUAP).<br>
+    Lizeth Jazmín Orozco García – Colaborador principal.<br>
+    Julio Alfredo Ballinas García – Colaborador del proyecto.
+  </div>
+
+</body>
+</html>

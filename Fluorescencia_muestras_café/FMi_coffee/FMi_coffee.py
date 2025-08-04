@@ -8,7 +8,7 @@
 #       format_version: '1.3'
 #       jupytext_version: 1.17.2
 #   kernelspec:
-#     display_name: ydata-env
+#     display_name: Python 3
 #     language: python
 #     name: python3
 # ---
@@ -118,7 +118,7 @@ fig.add_trace(go.Scatter(
     name="FOx_data"
 ))
 fig.update_layout(
-    title="Curva de intensidad espectral - Muestra FMi",
+    title="Espectro de fluorescencia de la muestra de café de Mixteca Alta Oaxaqueña (FMi)", 
     xaxis_title="Longitud de onda (nm)",
     yaxis_title="Intensidad (CPS)",
     legend_title="Muestra",
@@ -136,7 +136,7 @@ html_final = f"""
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Reporte de Intensidad UV-Vis - Muestra Mi</title>
+  <title>Reporte de espectro de fluorescencia - Muestra FMi </title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {{
@@ -188,7 +188,7 @@ html_final = f"""
 </head>
 <body>
 
-  <h1>Reporte de Intensidad UV-Vis - Muestra FMi</h1>
+  <h1>Reporte de espectro de fluorescencia - Muestra FMi</h1>
 
   <div class="info">
     <p><strong>Fecha:</strong> {fecha}</p>
@@ -216,13 +216,15 @@ html_final = f"""
 """
 
 
-with open("reporte_absorbancia.html", "w", encoding="utf-8") as f:
+with open("Reporte_FMi.html", "w", encoding="utf-8") as f:
     f.write(html_final)
 
-print("✅ Reporte generado: reporte_absorbancia.html")
+print("✅ Reporte generado: Reporte_FMi.html")
 
 # Mostrar gráfico si estás en Jupyter o interactivo
 fig.show()
 
 print("Rango de longitudes de onda:", df['nm'].min(), "a", df['nm'].max())
 
+
+# %%
